@@ -4,6 +4,7 @@ const progressText = document.querySelector('#progressText');
 const nextButton = document.querySelector('#nextDay');
 
 const pageLabels = [
+  '行前 · 雪地準備',
   '12/18 · 抵達與下呂',
   '12/19 · 新穗高',
   '12/20 · 高山與白川鄉',
@@ -35,11 +36,18 @@ function activatePanel(panelId, options = {}) {
 
   const activeTab = tabs[index];
   activeTab.scrollIntoView({ behavior: options.instant ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
-  progressText.textContent = index === tabs.length - 1 ? 'STAY LEDGER · 住宿費' : `DAY ${index + 1} · ${activeTab.querySelector('b').textContent}`;
+  if (panelId === 'pre-trip') {
+    progressText.textContent = 'BEFORE WE GO · 行前準備';
+  } else if (panelId === 'costs') {
+    progressText.textContent = 'STAY LEDGER · 住宿費';
+  } else {
+    const dayNumber = panelId.match(/day-(\d+)/)?.[1] ?? '';
+    progressText.textContent = `DAY ${dayNumber} · ${activeTab.querySelector('b').textContent}`;
+  }
 
   const nextIndex = (index + 1) % tabs.length;
   nextButton.dataset.next = tabs[nextIndex].dataset.panel;
-  nextButton.querySelector('span').textContent = nextIndex === 0 ? '回到第一天' : '下一頁';
+  nextButton.querySelector('span').textContent = nextIndex === 0 ? '回到行前' : '下一頁';
   nextButton.querySelector('b').textContent = pageLabels[nextIndex];
 
   if (!options.skipHash) history.replaceState(null, '', `#${panelId}`);
@@ -66,4 +74,4 @@ nextButton.addEventListener('click', () => {
 });
 
 const initialPanel = location.hash.slice(1);
-activatePanel(tabs.some((tab) => tab.dataset.panel === initialPanel) ? initialPanel : 'day-1', { instant: true, skipHash: !initialPanel });
+activatePanel(tabs.some((tab) => tab.dataset.panel === initialPanel) ? initialPanel : 'pre-trip', { instant: true, skipHash: !initialPanel });

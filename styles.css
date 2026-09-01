@@ -151,6 +151,7 @@ button { font: inherit; }
 .date-tab.is-active { border-color: var(--ink); color: var(--paper-light); background: var(--ink); }
 .date-tab.is-active::after { background: var(--red); }
 .date-tab.is-pending:not(.is-active) { border-style: dashed; border-color: var(--line); }
+.date-tab--prep { color: var(--moss); }
 .date-tab--cost { color: var(--red-deep); }
 .date-tab:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
 
@@ -177,6 +178,27 @@ button { font: inherit; }
 .day-number { color: var(--red); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; }
 .weather-note { flex: none; display: inline-grid; min-height: 2.35rem; padding: 0.45rem 0.75rem; place-items: center; border: 1px solid var(--moss); color: var(--moss); font-family: var(--display); font-size: 0.8rem; font-weight: 700; transform: rotate(1.5deg); }
 .weather-note--pending { border-style: dashed; color: var(--red-deep); border-color: var(--red); }
+
+.prep-intro { max-width: 62ch; margin: -1.4rem 0 var(--space-xl) 2.6rem; color: var(--ink-soft); line-height: 1.75; }
+.winter-priority { display: grid; gap: var(--space-xs); margin-left: 2.6rem; padding: var(--space-lg); color: var(--paper-light); background: var(--ink); }
+.winter-priority span { color: var(--sky); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; }
+.winter-priority strong { max-width: 32ch; font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.75rem); line-height: 1.45; }
+.winter-priority p { max-width: 58ch; margin: 0; color: color-mix(in oklch, var(--paper-light) 78%, var(--ink)); font-size: 0.82rem; }
+.prep-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--space-2xl); margin: var(--space-2xl) 0 0 2.6rem; }
+.prep-group { align-self: start; border-top: 2px solid var(--ink); padding-top: var(--space-sm); }
+.prep-group__heading { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: var(--space-sm); }
+.prep-group__heading > span { color: var(--red); font-family: var(--display); font-size: 1.35rem; font-weight: 700; line-height: 1; }
+.prep-group h3 { margin: 0; font-family: var(--display); font-size: 1.25rem; line-height: 1.1; }
+.prep-group__heading p { margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 0.78rem; }
+.prep-list { display: grid; gap: var(--space-sm); margin: var(--space-md) 0 0; padding: 0; list-style: none; }
+.prep-list li { position: relative; padding-left: 1rem; color: var(--ink-soft); font-size: 0.86rem; line-height: 1.65; }
+.prep-list li::before { content: ""; position: absolute; top: 0.68em; left: 0; width: 0.38rem; height: 0.38rem; border-radius: 50%; background: var(--moss); }
+.prep-list b { color: var(--ink); }
+.winter-rule { display: grid; gap: var(--space-xs); margin: var(--space-2xl) 0 0 2.6rem; padding-block: var(--space-lg); border-block: 1px solid var(--red); }
+.winter-rule span { color: var(--red-deep); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; }
+.winter-rule strong { max-width: 46ch; font-family: var(--display); font-size: 1.15rem; line-height: 1.55; }
+.prep-sources { margin: var(--space-md) 0 0 2.6rem; color: var(--ink-soft); font-size: 0.72rem; }
+.prep-sources a { color: var(--ink); text-underline-offset: 0.18em; }
 
 .postcard-photo {
   position: relative;
@@ -300,7 +322,8 @@ button { font: inherit; }
   .timeline li::before { left: -1.7rem; }
   .timeline time { grid-column: 1 / -1; padding: 0; }
   .stop p { font-size: 0.86rem; }
-  .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
+  .prep-intro, .winter-priority, .prep-grid, .winter-rule, .prep-sources, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
+  .prep-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
   .route-pair { grid-template-columns: 1fr; }
   .ledger__row { grid-template-columns: 3.5rem 1fr auto; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
   .ledger__row b { grid-column: 2; text-align: left; }
