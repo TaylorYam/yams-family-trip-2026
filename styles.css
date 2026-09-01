@@ -216,6 +216,8 @@ button { font: inherit; }
 .stop h3 { margin: 0; font-family: var(--display); font-size: 1.25rem; line-height: 1.35; }
 .stop h3 a { text-decoration-color: color-mix(in oklch, var(--red) 50%, transparent); }
 .stop p { max-width: 45ch; margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 0.9rem; }
+.stop .sight-highlight { margin-top: 0.45rem; color: var(--ink); line-height: 1.65; }
+.sight-highlight span { display: inline-block; margin-right: 0.45rem; padding: 0.05rem 0.38rem; color: var(--paper-light); background: var(--moss); font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em; vertical-align: 0.08em; }
 .memo, .price-tag { display: inline-flex; margin-top: var(--space-xs); padding: 0.15rem 0.55rem; color: var(--red-deep); background: color-mix(in oklch, var(--red) 10%, var(--paper-light)); font-family: var(--display); font-size: 0.78rem; font-weight: 700; transform: rotate(-0.4deg); }
 .price-tag { color: var(--ink); background: color-mix(in oklch, var(--sky) 22%, var(--paper-light)); }
 .price-tag--pending { border: 1px dashed var(--red); color: var(--red-deep); background: transparent; }
