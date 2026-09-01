@@ -219,17 +219,19 @@ button { font: inherit; }
 .empty-note span { color: color-mix(in oklch, var(--red) 28%, transparent); font-family: var(--display); font-size: clamp(4rem, 16vw, 9rem); font-weight: 700; line-height: 0.8; }
 .empty-note h3 { margin: -0.35rem 0 0; font-family: var(--display); font-size: clamp(1.4rem, 4vw, 2.2rem); }
 .empty-note p { margin: var(--space-xs) auto 0; color: var(--ink-soft); }
-.stay-footer { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-md); margin-left: 2.6rem; padding: var(--space-md) 0; border-block: 1px solid var(--line); }
+.stay-footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-md); margin-left: 2.6rem; padding: var(--space-md) 0; border-block: 1px solid var(--line); }
+.stay-footer__details { display: grid; gap: 0.1rem; }
 .stay-footer span { color: var(--moss); font-size: 0.72rem; font-weight: 700; }
-.stay-footer a { font-family: var(--display); font-weight: 700; }
-.stay-footer b { font-size: 0.82rem; }
+.stay-footer strong { font-family: var(--display); font-size: 1.05rem; }
+.stay-footer b { color: var(--ink-soft); font-size: 0.82rem; }
 
 .cost-intro { max-width: 50ch; margin: -1.5rem 0 var(--space-xl) 2.6rem; color: var(--ink-soft); }
 .ledger { margin-left: 2.6rem; border-top: 2px solid var(--ink); }
-.ledger__row { display: grid; grid-template-columns: 4.2rem 1fr auto; align-items: center; gap: var(--space-md); min-height: 3.35rem; border-bottom: 1px solid var(--line); }
+.ledger__row { display: grid; grid-template-columns: 4.2rem 1fr auto auto; align-items: center; gap: var(--space-md); min-height: 3.35rem; border-bottom: 1px solid var(--line); }
 .ledger__row span { color: var(--ink-soft); font-size: 0.78rem; }
-.ledger__row a { font-family: var(--display); font-weight: 700; }
+.ledger__stay { font-family: var(--display); font-size: 1rem; }
 .ledger__row b { font-size: 0.9rem; text-align: right; }
+.map-link--ledger { min-width: 3.25rem; }
 .ledger__row--pending { color: var(--red-deep); }
 .total-block { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: var(--space-sm) var(--space-lg); margin: var(--space-xl) 0 0 2.6rem; padding: var(--space-xl); color: var(--paper-light); background: var(--ink); }
 .total-block span { font-family: var(--display); font-size: 1rem; }
@@ -269,10 +271,9 @@ button { font: inherit; }
   .stop p { font-size: 0.86rem; }
   .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
   .route-pair { grid-template-columns: 1fr; }
-  .stay-footer { grid-template-columns: 1fr auto; }
-  .stay-footer span { grid-column: 1 / -1; }
-  .ledger__row { grid-template-columns: 3.5rem 1fr; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
+  .ledger__row { grid-template-columns: 3.5rem 1fr auto; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
   .ledger__row b { grid-column: 2; text-align: left; }
+  .ledger__row .map-link { grid-column: 3; grid-row: 1 / span 2; }
   .total-block { grid-template-columns: 1fr; }
   .total-block strong { font-size: 2.5rem; }
   .cost-note { grid-template-columns: 1fr; }
