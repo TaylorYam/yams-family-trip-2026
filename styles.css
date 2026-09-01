@@ -178,6 +178,22 @@ button { font: inherit; }
 .weather-note { flex: none; display: inline-grid; min-height: 2.35rem; padding: 0.45rem 0.75rem; place-items: center; border: 1px solid var(--moss); color: var(--moss); font-family: var(--display); font-size: 0.8rem; font-weight: 700; transform: rotate(1.5deg); }
 .weather-note--pending { border-style: dashed; color: var(--red-deep); border-color: var(--red); }
 
+.postcard-photo {
+  position: relative;
+  margin: -1rem 0 var(--space-2xl) 2.6rem;
+  padding: var(--space-xs) var(--space-xs) var(--space-sm);
+  border: 1px solid var(--line);
+  background: var(--paper-light);
+  box-shadow: 5px 6px 0 oklch(0.64 0.04 83 / 0.16);
+}
+.postcard-photo--left { transform: rotate(-0.45deg); }
+.postcard-photo--right { transform: rotate(0.45deg); }
+.postcard-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; filter: saturate(0.9) contrast(0.98) sepia(0.035); }
+.postcard-photo figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-md); padding: var(--space-xs) var(--space-2xs) 0; font-family: var(--display); font-size: 0.9rem; font-weight: 700; }
+.postcard-photo figcaption span { color: var(--red); font-family: var(--body); font-size: 0.65rem; letter-spacing: 0.12em; }
+.postcard-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin: -1rem 0 var(--space-2xl) 2.6rem; }
+.postcard-pair .postcard-photo { margin: 0; }
+
 .flight-ticket { position: relative; display: grid; grid-template-columns: 1fr 5rem 1fr; align-items: center; gap: var(--space-sm); margin: 0 0 var(--space-xl) 2.6rem; padding: var(--space-lg); border: 1px solid var(--ink); background: color-mix(in oklch, var(--sky) 12%, var(--paper-light)); }
 .flight-ticket::before, .flight-ticket::after { content: ""; position: absolute; top: 50%; width: 0.8rem; aspect-ratio: 1; border: 1px solid var(--ink); border-radius: 50%; background: var(--paper-light); transform: translateY(-50%); }
 .flight-ticket::before { left: -0.45rem; }
@@ -246,6 +262,10 @@ button { font: inherit; }
 
 .sheet-footer { display: grid; gap: var(--space-lg); padding: var(--space-xl) var(--space-xs) 0; }
 .sheet-footer p { margin: 0; color: var(--ink-soft); font-size: 0.75rem; text-align: center; }
+.photo-credits { color: var(--ink-soft); font-size: 0.72rem; }
+.photo-credits summary { min-height: 2.75rem; padding: var(--space-sm) 0; color: var(--ink); cursor: pointer; font-weight: 700; text-align: center; }
+.photo-credits ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xs) var(--space-lg); margin: 0; padding: var(--space-md) var(--space-xl); border-block: 1px solid var(--line); list-style: none; }
+.photo-credits a { text-decoration-color: var(--line); }
 .next-day { display: grid; grid-template-columns: auto 1fr auto; min-height: 4rem; align-items: center; gap: var(--space-md); width: 100%; padding: var(--space-sm) var(--space-lg); border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; text-align: left; }
 .next-day span { color: var(--ink-soft); font-size: 0.72rem; }
 .next-day b { font-family: var(--display); font-size: 1rem; }
@@ -265,6 +285,11 @@ button { font: inherit; }
   .day-heading { display: grid; gap: var(--space-sm); padding-left: 0; }
   .day-heading h2 { max-width: 12ch; }
   .weather-note { justify-self: start; }
+  .postcard-photo, .postcard-pair { margin-left: 0; }
+  .postcard-photo { margin-top: -0.5rem; }
+  .postcard-pair { grid-template-columns: 1fr; }
+  .postcard-pair .postcard-photo { margin: 0; }
+  .photo-credits ul { grid-template-columns: 1fr; padding-inline: var(--space-sm); }
   .flight-ticket { grid-template-columns: 1fr 3rem 1fr; margin-left: 0; padding: var(--space-md) var(--space-sm); }
   .flight-ticket strong { font-size: 1.55rem; }
   .timeline { padding-left: 1.7rem; }
