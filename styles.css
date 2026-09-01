@@ -207,6 +207,10 @@ button { font: inherit; }
 .map-link { display: inline-grid; min-width: 3.25rem; min-height: 2.75rem; padding: 0.35rem 0.65rem; place-items: center; border: 1px solid var(--ink); color: var(--ink); background: var(--paper-light); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
 .map-link:hover { color: var(--paper-light); background: var(--ink); }
 .map-link:focus-visible, .route-button:focus-visible, .next-day:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+.stay-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: var(--space-xs); }
+.stay-actions .map-link { min-width: auto; padding-inline: var(--space-sm); white-space: nowrap; }
+.map-link--airbnb { border-color: var(--red); color: var(--red-deep); background: color-mix(in oklch, var(--red) 8%, var(--paper-light)); }
+.map-link--airbnb:hover { border-color: var(--red-deep); background: var(--red); }
 
 .route-button { display: flex; min-height: 3.5rem; align-items: center; justify-content: space-between; gap: var(--space-lg); margin: clamp(2.5rem, 6vw, 4rem) 0 0 2.6rem; padding: var(--space-sm) var(--space-lg); color: var(--paper-light); background: var(--red); font-weight: 700; text-decoration: none; box-shadow: 4px 4px 0 var(--red-deep); transition: transform 160ms ease-out, box-shadow 160ms ease-out; }
 .route-button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--red-deep); }
@@ -273,7 +277,9 @@ button { font: inherit; }
   .route-pair { grid-template-columns: 1fr; }
   .ledger__row { grid-template-columns: 3.5rem 1fr auto; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
   .ledger__row b { grid-column: 2; text-align: left; }
-  .ledger__row .map-link { grid-column: 3; grid-row: 1 / span 2; }
+  .timeline .stay-actions { grid-column: 1 / -1; justify-self: start; }
+  .ledger__row > .map-link { grid-column: 3; grid-row: 1 / span 2; }
+  .ledger__row .stay-actions { grid-column: 2 / -1; grid-row: 3; justify-content: flex-start; margin-top: var(--space-xs); }
   .total-block { grid-template-columns: 1fr; }
   .total-block strong { font-size: 2.5rem; }
   .cost-note { grid-template-columns: 1fr; }
