@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=route-a1">
-  <script src="script.js?v=b24d7b0" defer></script>
+  <link rel="stylesheet" href="styles.css?v=food-a1">
+  <script src="script.js?v=food-a1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#trip-content">跳到行程內容</a>
@@ -51,6 +51,7 @@
       <button class="date-tab" role="tab" aria-selected="false" aria-controls="day-7" id="tab-day-7" data-panel="day-7"><b>12/24</b><span>四</span></button>
       <button class="date-tab is-pending" role="tab" aria-selected="false" aria-controls="day-8" id="tab-day-8" data-panel="day-8"><b>12/25</b><span>五</span></button>
       <button class="date-tab is-pending" role="tab" aria-selected="false" aria-controls="day-9" id="tab-day-9" data-panel="day-9"><b>12/26</b><span>六</span></button>
+      <button class="date-tab date-tab--food" role="tab" aria-selected="false" aria-controls="restaurants" id="tab-restaurants" data-panel="restaurants"><b>餐廳</b><span>候選</span></button>
       <button class="date-tab date-tab--cost" role="tab" aria-selected="false" aria-controls="costs" id="tab-costs" data-panel="costs"><b>住宿</b><span>費用</span></button>
     </div>
   </nav>
@@ -327,6 +328,126 @@
         <div><span>12/26</span><strong>15:50</strong><small>TPE 桃園 T1</small></div>
       </div>
       <div class="empty-note"><span aria-hidden="true">帰路</span><h3>上午行程暫不安排。</h3><p>之後再補上離開住宿與前往機場的時間。</p></div>
+    </section>
+
+    <section class="day-sheet food-sheet" id="restaurants" role="tabpanel" aria-labelledby="tab-restaurants" hidden>
+      <header class="day-heading"><div><span class="day-number">FOOD POCKET LIST</span><h2>到了再選的餐廳</h2></div><span class="weather-note">依所在城市挑選</span></header>
+      <p class="food-intro">先看自己在哪個城市，再依當下想吃的料理與時間選店。營業時間是目前查到的資訊，出發前仍請點地圖確認臨時休業。</p>
+
+      <nav class="food-city-nav" aria-label="快速前往餐廳地區">
+        <button type="button" data-food-target="food-takayama"><b>高山</b><span>午餐・點心</span></button>
+        <button type="button" data-food-target="food-kanazawa"><b>金澤</b><span>晚餐・早餐</span></button>
+        <button type="button" data-food-target="food-toyama"><b>富山／高岡</b><span>洋食午餐</span></button>
+        <button type="button" data-food-target="food-nagoya"><b>名古屋</b><span>名古屋飯・甜點</span></button>
+      </nav>
+
+      <section class="food-city" id="food-takayama" aria-labelledby="food-takayama-title">
+        <header class="food-city__heading"><span>01</span><div><h3 id="food-takayama-title">高山</h3><p>12/20 · 午餐二選一，老街再吃飛驒牛點心。</p></div></header>
+        <div class="food-list">
+          <article class="food-card">
+            <div class="food-card__meta"><span>蕎麥・午餐主選</span><b>12/20</b></div>
+            <h4>ざる蕎麦 せと</h4>
+            <p>有停車場，適合進老街前先吃；可品嘗不同產地的十割蕎麥。</p>
+            <small>11:00–16:00（L.O.15:30）· 週三休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/tNPumXtbCug86A5s8" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card">
+            <div class="food-card__meta"><span>烏龍麵・午餐備選</span><b>12/20</b></div>
+            <h4>新井こう平製麵所</h4>
+            <p>靠近高山站，適合想快速吃完、把時間留給老街散步時選擇。</p>
+            <small>營業時間請依當日地圖公告</small>
+            <a class="food-map" href="https://maps.app.goo.gl/zZiFncb4L1MpQ1fc7" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card food-card--snack">
+            <div class="food-card__meta"><span>飛驒牛握壽司・點心</span><b>老街途中</b></div>
+            <h4>飛驒 特牛</h4>
+            <p>午餐後當作老街散步點心；不能預約，熱門時段可能排隊。</p>
+            <small>10:00–17:00 · 位於上三之町</small>
+            <a class="food-map" href="https://maps.app.goo.gl/x8z2mgi5NZP5EK798" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="food-city" id="food-kanazawa" aria-labelledby="food-kanazawa-title">
+        <header class="food-city__heading"><span>02</span><div><h3 id="food-kanazawa-title">金澤</h3><p>兩晚各安排一間，23日早上再吃咖啡店早餐。</p></div></header>
+        <div class="food-list">
+          <article class="food-card">
+            <div class="food-card__meta"><span>迴轉壽司・晚餐</span><b>12/21</b></div>
+            <h4>金澤美味壽司 本店</h4>
+            <p>抵達金澤後的第一晚，直接吃北陸海鮮；本店有共用停車場。</p>
+            <small>11:00–21:30（L.O.21:00）· 不接受訂位</small>
+            <a class="food-map" href="https://maps.app.goo.gl/o1etPbNhspKpCVzD6" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card">
+            <div class="food-card__meta"><span>金澤關東煮・晚餐</span><b>12/22</b></div>
+            <h4>おでん居酒屋 三幸</h4>
+            <p>富山返回金澤後吃關東煮；熱門時段常需排隊，建議早一點到。</p>
+            <small>16:00–22:00 · 日、國定假日及第二個週一休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/jd4FCF1mYnXqNLVo9" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card food-card--morning">
+            <div class="food-card__meta"><span>早午餐・咖啡</span><b>12/23 早上</b></div>
+            <h4>むさしの森珈琲 金澤入江店</h4>
+            <p>07:00開始營業，位在市區西側；吃完可順勢往福井方向出發。</p>
+            <small>07:00–22:00</small>
+            <a class="food-map" href="https://maps.app.goo.gl/scvbWjnCnKVuvzDbA" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="food-city" id="food-toyama" aria-labelledby="food-toyama-title">
+        <header class="food-city__heading"><span>03</span><div><h3 id="food-toyama-title">富山／高岡</h3><p>12/22 · 洋食午餐，接瑞龍寺與雨晴海岸。</p></div></header>
+        <div class="food-list food-list--single">
+          <article class="food-card">
+            <div class="food-card__meta"><span>洋食・午餐</span><b>12/22</b></div>
+            <h4>洋食 no ARIKA</h4>
+            <p>在新高岡站附近。若選這間，建議先吃午餐，再前往瑞龍寺與雨晴海岸。</p>
+            <small>11:00–15:00（L.O.14:30）· 週三及不定期休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/twCJPpWjz59KrbGZ9" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="food-city" id="food-nagoya" aria-labelledby="food-nagoya-title">
+        <header class="food-city__heading"><span>04</span><div><h3 id="food-nagoya-title">名古屋</h3><p>12/23–26 · 依當天活動與所在區域決定。</p></div></header>
+        <div class="food-list">
+          <article class="food-card food-card--snack">
+            <div class="food-card__meta"><span>泡芙・點心</span><b>名古屋站</b></div>
+            <h4>Chou de kacha</h4>
+            <p>名古屋站步行約3分鐘，適合逛街途中外帶；每日數量有限。</p>
+            <small>11:00–18:00 · 週一、週二休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/b5tF2RK7i9PZzgyp6" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card">
+            <div class="food-card__meta"><span>低溫炸豬排・午晚餐</span><b>名古屋站</b></div>
+            <h4>カツレツ MATUMURA</h4>
+            <p>位於大名古屋大樓，適合名古屋站周邊行程；可先預約減少等候。</p>
+            <small>11:00–22:00 · 全年無休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/67jN29V8eZYW9bG88" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card food-card--morning">
+            <div class="food-card__meta"><span>吐司・早餐</span><b>12/24 或 25</b></div>
+            <h4>つばめパン＆Milk 尼ケ坂本店</h4>
+            <p>需要特地前往尼ケ坂；早餐時段有奶油吐司、小倉吐司等選擇。</p>
+            <small>Morning 08:00–11:00 · 年末年始休</small>
+            <a class="food-map" href="https://maps.app.goo.gl/oPPju6GVDmtFuwwR7" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card food-card--eel">
+            <div class="food-card__meta"><span>鰻魚飯・二選一</span><b>市中心</b></div>
+            <h4>鰻櫃 花岡</h4>
+            <p>想在榮、伏見一帶活動時選這間；確定日期後再放入正式行程。</p>
+            <small>營業時間請依當日地圖公告</small>
+            <a class="food-map" href="https://maps.app.goo.gl/Bggg4NUgwVW3uJsW9" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+          <article class="food-card food-card--eel">
+            <div class="food-card__meta"><span>鰻魚飯・二選一</span><b>名古屋站</b></div>
+            <h4>ひつまぶし 名古屋 備長</h4>
+            <p>選大名古屋大樓店最方便，名古屋站直結且可預約。</p>
+            <small>11:00–15:00、17:00–22:00</small>
+            <a class="food-map" href="https://www.google.com/maps/search/?api=1&amp;query=Hitsumabushi+Nagoya+Bincho+Dai+Nagoya+Building" target="_blank" rel="noopener">Google 地圖</a>
+          </article>
+        </div>
+      </section>
     </section>
 
     <section class="day-sheet cost-sheet" id="costs" role="tabpanel" aria-labelledby="tab-costs" hidden>

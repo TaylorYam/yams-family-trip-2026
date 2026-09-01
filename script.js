@@ -14,6 +14,7 @@ const pageLabels = [
   '12/24 · 犬山城',
   '12/25 · 待安排',
   '12/26 · 返程',
+  '餐廳候選',
   '住宿費用'
 ];
 
@@ -38,6 +39,8 @@ function activatePanel(panelId, options = {}) {
   activeTab.scrollIntoView({ behavior: options.instant ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
   if (panelId === 'pre-trip') {
     progressText.textContent = 'BEFORE WE GO · 行前準備';
+  } else if (panelId === 'restaurants') {
+    progressText.textContent = 'FOOD POCKET LIST · 餐廳候選';
   } else if (panelId === 'costs') {
     progressText.textContent = 'STAY LEDGER · 住宿費';
   } else {
@@ -65,6 +68,12 @@ tabs.forEach((tab) => {
     event.preventDefault();
     tabs[targetIndex].focus();
     activatePanel(tabs[targetIndex].dataset.panel);
+  });
+});
+
+document.querySelectorAll('[data-food-target]').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelector(`#${button.dataset.foodTarget}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
