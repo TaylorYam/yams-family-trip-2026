@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=b24d7b0">
+  <link rel="stylesheet" href="styles.css?v=route-a1">
   <script src="script.js?v=b24d7b0" defer></script>
 </head>
 <body>
@@ -91,6 +91,83 @@
       </div>
 
       <p class="prep-sources">出發前可查看：<a href="https://www.jma.go.jp/bosai/forecast/" target="_blank" rel="noopener">日本氣象廳各地天氣</a></p>
+
+      <section class="journey-overview" aria-labelledby="journey-overview-title">
+        <header class="journey-overview__heading">
+          <div><span>DRIVE ROUTE · DAY 1–6</span><h3 id="journey-overview-title">前六天自駕路線總覽</h3></div>
+          <p>從名古屋進入飛驒與北陸，沿日本海繞行福井後返回名古屋。</p>
+        </header>
+
+        <figure class="route-atlas">
+          <svg class="route-atlas__map" viewBox="0 0 760 640" role="img" aria-labelledby="route-map-title route-map-desc">
+            <title id="route-map-title">十二月十八日至二十三日自駕路線示意圖</title>
+            <desc id="route-map-desc">每天以不同顏色標示。路線由中部國際機場前往郡上、下呂、新穗高、平湯、高山、白川鄉、金澤、富山、東尋坊、永平寺，最後回到名古屋。</desc>
+
+            <path class="route-atlas__land" d="M85 118c54-41 119-46 173-20 36 17 61 17 99-4 45-25 112-23 165 6 49 27 86 77 99 136 13 61 5 135-18 194-25 66-76 125-143 155-65 29-154 34-229 3-82-35-142-107-153-193-9-71 14-137 46-185 22-33 8-63-39-92Z"/>
+            <path class="route-atlas__coast" d="M109 137c48 12 91 8 127-15 33-21 67-21 101-4 38 19 78 17 115-5 35-21 78-16 116 11"/>
+            <g class="route-atlas__sea" aria-hidden="true">
+              <path d="M103 82c20-9 39-9 58 0s38 9 58 0"/>
+              <path d="M129 99c20-9 39-9 58 0s38 9 58 0"/>
+              <text x="104" y="52">SEA OF JAPAN</text>
+              <text x="104" y="69">日本海</text>
+            </g>
+
+            <g class="route-atlas__roads" aria-hidden="true">
+              <path d="M331 589C332 525 344 476 383 430s69-99 88-142"/>
+              <path d="M176 302c80 8 134-4 184-31 42-23 86-53 128-104"/>
+              <path d="M225 350c72 27 121 68 165 124 21 27 33 54 39 91"/>
+            </g>
+
+            <g class="route-atlas__routes" aria-hidden="true">
+              <path class="route-line route-line--1" d="M331 589C326 548 327 497 350 440C375 419 411 404 450 395"/>
+              <path class="route-line route-line--2" d="M450 395C477 363 503 323 540 285C542 301 531 313 515 320"/>
+              <path class="route-line route-line--3" d="M515 320C493 315 472 312 455 310C423 300 390 284 360 270"/>
+              <path class="route-line route-line--3 route-line--optional" d="M360 270C327 246 291 221 255 195"/>
+              <path class="route-line route-line--4" d="M255 195c-19 0-28 11-27 24 2 16 22 20 37 11 14-9 12-31-10-35Z"/>
+              <path class="route-line route-line--5" d="M255 195C292 173 330 157 365 145C390 147 414 157 430 170C385 192 330 207 255 195Z"/>
+              <path class="route-line route-line--6" d="M255 195C227 227 202 264 180 300C195 319 210 337 225 350C270 390 322 451 390 540"/>
+            </g>
+
+            <g class="route-atlas__places">
+              <g transform="translate(331 589)"><circle r="7"/><text x="13" y="5">中部機場</text></g>
+              <g transform="translate(350 440)"><circle r="7"/><text x="-12" y="-14" text-anchor="end">郡上</text></g>
+              <g transform="translate(450 395)"><circle r="7"/><text x="14" y="5">下呂</text></g>
+              <g transform="translate(540 285)"><circle r="7"/><text x="15" y="-7">新穗高</text></g>
+              <g transform="translate(515 320)"><circle r="7"/><text x="15" y="18">平湯</text></g>
+              <g transform="translate(455 310)"><circle r="7"/><text x="-18" y="-15" text-anchor="end">高山</text></g>
+              <g transform="translate(360 270)"><circle r="7"/><text x="-15" y="-13" text-anchor="end">白川鄉</text></g>
+              <g transform="translate(255 195)"><circle r="7"/><text x="-14" y="-15" text-anchor="end">金澤</text></g>
+              <g transform="translate(365 145)"><circle r="7"/><text x="-10" y="-16" text-anchor="end">雨晴</text></g>
+              <g transform="translate(430 170)"><circle r="7"/><text x="15" y="5">富山</text></g>
+              <g transform="translate(180 300)"><circle r="7"/><text x="-14" y="-13" text-anchor="end">東尋坊</text></g>
+              <g transform="translate(225 350)"><circle r="7"/><text x="-15" y="19" text-anchor="end">永平寺</text></g>
+              <g transform="translate(390 540)"><circle r="7"/><text x="14" y="5">名古屋</text></g>
+            </g>
+
+            <g class="route-atlas__daymarks" aria-hidden="true">
+              <g class="daymark daymark--1" transform="translate(319 527)"><circle r="13"/><text>1</text></g>
+              <g class="daymark daymark--2" transform="translate(493 348)"><circle r="13"/><text>2</text></g>
+              <g class="daymark daymark--3" transform="translate(394 279)"><circle r="13"/><text>3</text></g>
+              <g class="daymark daymark--4" transform="translate(232 218)"><circle r="13"/><text>4</text></g>
+              <g class="daymark daymark--5" transform="translate(356 174)"><circle r="13"/><text>5</text></g>
+              <g class="daymark daymark--6" transform="translate(248 373)"><circle r="13"/><text>6</text></g>
+            </g>
+          </svg>
+
+          <figcaption>
+            <span class="route-atlas__scale">路線示意 · 非比例尺</span>
+            <ol class="route-legend">
+              <li class="route-legend__day route-legend__day--1"><b>DAY 1</b><span>中部機場 → 郡上 → 下呂</span></li>
+              <li class="route-legend__day route-legend__day--2"><b>DAY 2</b><span>下呂 → 新穗高 → 平湯</span></li>
+              <li class="route-legend__day route-legend__day--3"><b>DAY 3</b><span>平湯 → 高山 → 白川鄉 → 金澤*</span></li>
+              <li class="route-legend__day route-legend__day--4"><b>DAY 4</b><span>金澤市內 · 兼六園</span></li>
+              <li class="route-legend__day route-legend__day--5"><b>DAY 5</b><span>金澤 → 雨晴 → 富山 → 金澤</span></li>
+              <li class="route-legend__day route-legend__day--6"><b>DAY 6</b><span>金澤 → 東尋坊 → 永平寺 → 名古屋</span></li>
+            </ol>
+            <p>* DAY 3 若訂到久松，當晚留宿白川鄉；圖中延伸至金澤為住宿備案。</p>
+          </figcaption>
+        </figure>
+      </section>
     </section>
 
     <section class="day-sheet" id="day-1" role="tabpanel" aria-labelledby="tab-day-1" hidden>

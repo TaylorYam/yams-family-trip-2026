@@ -193,6 +193,61 @@ button { font: inherit; }
 .prep-sources { margin: var(--space-md) 0 0 2.6rem; color: var(--ink-soft); font-size: 0.72rem; }
 .prep-sources a { color: var(--ink); text-underline-offset: 0.18em; }
 
+.journey-overview {
+  --route-day-1: oklch(0.52 0.17 29);
+  --route-day-2: oklch(0.59 0.13 72);
+  --route-day-3: oklch(0.49 0.105 153);
+  --route-day-4: oklch(0.51 0.12 322);
+  --route-day-5: oklch(0.52 0.12 232);
+  --route-day-6: oklch(0.4 0.11 269);
+  margin: var(--space-3xl) 0 var(--space-md) 2.6rem;
+  padding-top: var(--space-md);
+  border-top: 2px solid var(--ink);
+}
+.journey-overview__heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.72fr); gap: var(--space-xl); align-items: end; margin-bottom: var(--space-lg); }
+.journey-overview__heading span { color: var(--red); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; }
+.journey-overview__heading h3 { margin: 0.25rem 0 0; font-family: var(--display); font-size: clamp(1.45rem, 4vw, 2.2rem); line-height: 1.15; }
+.journey-overview__heading p { max-width: 33ch; margin: 0; color: var(--ink-soft); font-size: 0.8rem; line-height: 1.7; }
+.route-atlas { margin: 0; border: 1px solid var(--line); background: color-mix(in oklch, var(--paper-light) 82%, var(--sky)); }
+.route-atlas__map { display: block; width: 100%; height: auto; overflow: visible; }
+.route-atlas__land { fill: color-mix(in oklch, var(--paper) 88%, var(--moss)); stroke: color-mix(in oklch, var(--moss) 45%, var(--line)); stroke-width: 1.5; }
+.route-atlas__coast { fill: none; stroke: color-mix(in oklch, var(--sky) 70%, var(--ink-soft)); stroke-width: 2; stroke-dasharray: 2 7; stroke-linecap: round; }
+.route-atlas__sea path { fill: none; stroke: color-mix(in oklch, var(--sky) 80%, var(--ink-soft)); stroke-width: 1.5; stroke-linecap: round; }
+.route-atlas__sea text { fill: color-mix(in oklch, var(--sky) 60%, var(--ink-soft)); font-family: var(--body); font-size: 10px; font-weight: 700; letter-spacing: 0.13em; }
+.route-atlas__sea text + text { font-size: 11px; letter-spacing: 0.2em; }
+.route-atlas__roads path { fill: none; stroke: color-mix(in oklch, var(--line) 78%, var(--ink-soft)); stroke-width: 1.25; stroke-dasharray: 4 8; }
+.route-line { fill: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.route-line--1 { stroke: var(--route-day-1); }
+.route-line--2 { stroke: var(--route-day-2); }
+.route-line--3 { stroke: var(--route-day-3); }
+.route-line--optional { stroke-dasharray: 14 7; }
+.route-line--4 { stroke: var(--route-day-4); }
+.route-line--5 { stroke: var(--route-day-5); }
+.route-line--6 { stroke: var(--route-day-6); }
+.route-atlas__places circle { fill: var(--paper-light); stroke: var(--ink); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.route-atlas__places text { fill: var(--ink); font-family: var(--display); font-size: 15px; font-weight: 700; paint-order: stroke; stroke: var(--paper-light); stroke-width: 5px; stroke-linejoin: round; }
+.daymark circle { stroke: var(--paper-light); stroke-width: 3; vector-effect: non-scaling-stroke; }
+.daymark text { fill: var(--paper-light); font-family: var(--body); font-size: 12px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+.daymark--1 circle { fill: var(--route-day-1); }
+.daymark--2 circle { fill: var(--route-day-2); }
+.daymark--3 circle { fill: var(--route-day-3); }
+.daymark--4 circle { fill: var(--route-day-4); }
+.daymark--5 circle { fill: var(--route-day-5); }
+.daymark--6 circle { fill: var(--route-day-6); }
+.route-atlas figcaption { display: grid; gap: var(--space-md); padding: var(--space-md) var(--space-lg) var(--space-lg); border-top: 1px solid var(--line); background: var(--paper-light); }
+.route-atlas__scale { color: var(--ink-soft); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; }
+.route-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm) var(--space-xl); margin: 0; padding: 0; list-style: none; }
+.route-legend__day { display: grid; grid-template-columns: 3.65rem 1fr; gap: var(--space-sm); align-items: baseline; font-size: 0.76rem; }
+.route-legend__day b { font-size: 0.7rem; letter-spacing: 0.08em; }
+.route-legend__day span { color: var(--ink-soft); }
+.route-legend__day--1 b { color: var(--route-day-1); }
+.route-legend__day--2 b { color: var(--route-day-2); }
+.route-legend__day--3 b { color: var(--route-day-3); }
+.route-legend__day--4 b { color: var(--route-day-4); }
+.route-legend__day--5 b { color: var(--route-day-5); }
+.route-legend__day--6 b { color: var(--route-day-6); }
+.route-atlas figcaption > p { margin: 0; padding-top: var(--space-sm); border-top: 1px dashed var(--line); color: var(--ink-soft); font-size: 0.7rem; }
+
 .postcard-photo {
   position: relative;
   margin: -1rem 0 var(--space-2xl) 2.6rem;
@@ -315,8 +370,16 @@ button { font: inherit; }
   .timeline li::before { left: -1.7rem; }
   .timeline time { grid-column: 1 / -1; padding: 0; }
   .stop p { font-size: 0.86rem; }
-  .prep-intro, .prep-grid, .prep-sources, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
+  .prep-intro, .prep-grid, .prep-sources, .journey-overview, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
   .prep-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .journey-overview { margin-top: var(--space-2xl); }
+  .journey-overview__heading { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .journey-overview__heading p { max-width: 42ch; }
+  .route-atlas { margin-inline: calc(var(--space-xs) * -1); }
+  .route-atlas__places text { font-size: 18px; stroke-width: 6px; }
+  .route-atlas figcaption { padding-inline: var(--space-md); }
+  .route-legend { grid-template-columns: 1fr; gap: var(--space-xs); }
+  .route-legend__day { font-size: 0.78rem; }
   .route-pair { grid-template-columns: 1fr; }
   .ledger__row { grid-template-columns: 3.5rem 1fr auto; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
   .ledger__row b { grid-column: 2; text-align: left; }
