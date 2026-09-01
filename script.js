@@ -5,6 +5,7 @@ const nextButton = document.querySelector('#nextDay');
 
 const pageLabels = [
   '行前 · 雪地準備',
+  '餐廳候選',
   '12/18 · 抵達與下呂',
   '12/19 · 新穗高',
   '12/20 · 高山與白川鄉',
@@ -14,7 +15,6 @@ const pageLabels = [
   '12/24 · 犬山城',
   '12/25 · 待安排',
   '12/26 · 返程',
-  '餐廳候選',
   '住宿費用'
 ];
 
