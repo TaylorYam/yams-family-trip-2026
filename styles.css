@@ -247,12 +247,6 @@ button { font: inherit; }
 .route-legend__day--6 b { color: var(--route-day-6); }
 .route-atlas figcaption > p { margin: 0; padding-top: var(--space-sm); border-top: 1px dashed var(--line); color: var(--ink-soft); font-size: 0.7rem; }
 
-.day-extras { display: grid; gap: var(--space-2xl); margin: var(--space-3xl) 0 0 2.6rem; }
-.flex-block { display: grid; gap: var(--space-md); }
-.flex-block__heading { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: var(--space-md); padding-bottom: var(--space-sm); border-bottom: 2px solid var(--ink); }
-.flex-block__heading span { color: var(--red); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.13em; }
-.flex-block__heading h3 { margin: 0.2rem 0 0; font-family: var(--display); font-size: 1.35rem; line-height: 1.15; }
-.flex-block__heading > b { align-self: center; color: var(--ink-soft); font-size: 0.7rem; font-weight: 600; }
 .choice-list { display: grid; border-top: 1px solid var(--line); }
 .choice-item { display: grid; grid-template-columns: minmax(6.8rem, 0.28fr) minmax(0, 1fr) auto; align-items: center; gap: var(--space-md); min-height: 6.6rem; padding: var(--space-md) var(--space-sm); border-bottom: 1px solid var(--line); background: color-mix(in oklch, var(--paper-light) 92%, var(--paper)); }
 .choice-item--snack { background: color-mix(in oklch, var(--paper-light) 91%, var(--red)); }
@@ -345,6 +339,7 @@ button { font: inherit; }
 .empty-note span { color: color-mix(in oklch, var(--red) 28%, transparent); font-family: var(--display); font-size: clamp(4rem, 16vw, 9rem); font-weight: 700; line-height: 0.8; }
 .empty-note h3 { margin: -0.35rem 0 0; font-family: var(--display); font-size: clamp(1.4rem, 4vw, 2.2rem); }
 .empty-note p { margin: var(--space-xs) auto 0; color: var(--ink-soft); }
+.timeline--flexible { margin-top: var(--space-lg); }
 .stay-footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-md); margin-left: 2.6rem; padding: var(--space-md) 0; border-block: 1px solid var(--line); }
 .stay-footer__details { display: grid; gap: 0.1rem; }
 .stay-footer span { color: var(--moss); font-size: 0.72rem; font-weight: 700; }
@@ -407,7 +402,7 @@ button { font: inherit; }
   .timeline-item--with-nearby > .stop, .timeline-item--with-picks > .stop { grid-column: 1; }
   .timeline-item--with-nearby > .map-link, .timeline-item--with-picks > .map-link { grid-column: 1; justify-self: end; margin-top: var(--space-xs); }
   .stop p { font-size: 0.86rem; }
-  .prep-intro, .prep-grid, .prep-sources, .journey-overview, .day-extras, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
+  .prep-intro, .prep-grid, .prep-sources, .journey-overview, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
   .prep-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
   .journey-overview { margin-top: var(--space-2xl); }
   .journey-overview__heading { grid-template-columns: 1fr; gap: var(--space-sm); }
@@ -417,9 +412,6 @@ button { font: inherit; }
   .route-atlas figcaption { padding-inline: var(--space-md); }
   .route-legend { grid-template-columns: 1fr; gap: var(--space-xs); }
   .route-legend__day { font-size: 0.78rem; }
-  .day-extras { margin-top: var(--space-2xl); }
-  .flex-block__heading { align-items: start; }
-  .flex-block__heading > b { max-width: 9rem; text-align: right; }
   .choice-item { grid-template-columns: 1fr auto; gap: var(--space-sm); padding: var(--space-md) var(--space-xs); }
   .choice-item__meta { grid-column: 1 / -1; grid-template-columns: auto 1fr; gap: var(--space-xs); }
   .choice-item p { font-size: 0.76rem; }
