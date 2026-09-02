@@ -314,6 +314,14 @@ button { font: inherit; }
 .nearby-stop__map { display: inline-grid; min-width: 3.1rem; min-height: 2.75rem; padding: 0.25rem 0.55rem; place-items: center; border: 1px solid var(--ink); color: var(--ink); background: var(--paper-light); font-size: 0.7rem; font-weight: 700; text-decoration: none; }
 .nearby-stop__map:hover { color: var(--paper-light); background: var(--ink); }
 .nearby-stop__map:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
+.time-picks { display: grid; gap: 0; max-width: 38rem; margin-top: var(--space-lg); }
+.time-picks__heading { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-sm); padding: var(--space-xs) 0; border-bottom: 2px solid var(--ink); color: var(--red-deep); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
+.time-picks__heading small { color: var(--ink-soft); font-size: 0.65rem; font-weight: 500; letter-spacing: 0; text-align: right; }
+.time-picks .choice-item { grid-template-columns: minmax(5.6rem, 0.26fr) minmax(0, 1fr) auto; min-height: auto; padding: var(--space-sm) var(--space-xs); background: color-mix(in oklch, var(--paper-light) 95%, var(--paper)); }
+.time-picks .choice-item--snack { background: color-mix(in oklch, var(--paper-light) 93%, var(--red)); }
+.time-picks .choice-item h4 { font-size: 1rem; }
+.time-picks .choice-item p { font-size: 0.74rem; }
+.time-picks .choice-item .map-link { min-width: 3.2rem; }
 .memo, .price-tag { display: inline-flex; margin-top: var(--space-xs); padding: 0.15rem 0.55rem; color: var(--red-deep); background: color-mix(in oklch, var(--red) 10%, var(--paper-light)); font-family: var(--display); font-size: 0.78rem; font-weight: 700; transform: rotate(-0.4deg); }
 .price-tag { color: var(--ink); background: color-mix(in oklch, var(--sky) 22%, var(--paper-light)); }
 .price-tag--pending { border: 1px dashed var(--red); color: var(--red-deep); background: transparent; }
@@ -395,9 +403,9 @@ button { font: inherit; }
   .timeline li { grid-template-columns: 1fr auto; gap: var(--space-xs) var(--space-sm); }
   .timeline li::before { left: -1.7rem; }
   .timeline time { grid-column: 1 / -1; padding: 0; }
-  .timeline-item--with-nearby { grid-template-columns: minmax(0, 1fr); }
-  .timeline-item--with-nearby > .stop { grid-column: 1; }
-  .timeline-item--with-nearby > .map-link { grid-column: 1; justify-self: end; margin-top: var(--space-xs); }
+  .timeline-item--with-nearby, .timeline-item--with-picks { grid-template-columns: minmax(0, 1fr); }
+  .timeline-item--with-nearby > .stop, .timeline-item--with-picks > .stop { grid-column: 1; }
+  .timeline-item--with-nearby > .map-link, .timeline-item--with-picks > .map-link { grid-column: 1; justify-self: end; margin-top: var(--space-xs); }
   .stop p { font-size: 0.86rem; }
   .prep-intro, .prep-grid, .prep-sources, .journey-overview, .day-extras, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
   .prep-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
@@ -416,6 +424,9 @@ button { font: inherit; }
   .choice-item__meta { grid-column: 1 / -1; grid-template-columns: auto 1fr; gap: var(--space-xs); }
   .choice-item p { font-size: 0.76rem; }
   .choice-item .map-link { grid-column: 2; grid-row: 2; align-self: start; }
+  .time-picks .choice-item { grid-template-columns: minmax(0, 1fr) auto; }
+  .time-picks .choice-item__meta { grid-column: 1 / -1; }
+  .time-picks .choice-item .map-link { grid-column: 2; grid-row: 2; width: auto; }
   .route-pair { grid-template-columns: 1fr; }
   .ledger__row { grid-template-columns: 3.5rem 1fr auto; gap: 0 var(--space-sm); padding-block: var(--space-xs); }
   .ledger__row b { grid-column: 2; text-align: left; }
