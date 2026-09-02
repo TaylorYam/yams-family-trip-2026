@@ -265,8 +265,6 @@ button { font: inherit; }
 .choice-item p { max-width: 48ch; margin: 0.2rem 0; color: var(--ink-soft); font-size: 0.78rem; line-height: 1.55; }
 .choice-item > div > small { color: var(--ink-soft); font-size: 0.66rem; }
 .choice-item .map-link { min-width: 3.6rem; }
-.flex-placeholder { margin: 0; padding: var(--space-md); border: 1px dashed var(--line); color: var(--ink-soft); background: color-mix(in oklch, var(--paper-light) 94%, var(--sky)); font-size: 0.78rem; line-height: 1.65; }
-
 .postcard-photo {
   position: relative;
   margin: -1rem 0 var(--space-2xl) 2.6rem;
@@ -307,6 +305,15 @@ button { font: inherit; }
 .stop p { max-width: 45ch; margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 0.9rem; }
 .stop .sight-highlight { margin-top: 0.45rem; color: var(--ink); line-height: 1.65; }
 .sight-highlight span { display: inline-block; margin-right: 0.45rem; padding: 0.05rem 0.38rem; color: var(--paper-light); background: var(--moss); font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em; vertical-align: 0.08em; }
+.nearby-stops { display: grid; gap: 0; max-width: 34rem; margin-top: var(--space-md); border-top: 1px solid var(--line); }
+.nearby-stops__heading { display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); padding: var(--space-xs) 0; color: var(--red-deep); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; }
+.nearby-stops__heading small { color: var(--ink-soft); font-size: 0.65rem; font-weight: 500; letter-spacing: 0; }
+.nearby-stop { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-sm); padding: var(--space-sm) 0; border-top: 1px dashed var(--line); }
+.nearby-stop b { display: block; font-family: var(--display); font-size: 0.95rem; line-height: 1.35; }
+.nearby-stop span { display: block; margin-top: 0.1rem; color: var(--ink-soft); font-size: 0.72rem; line-height: 1.5; }
+.nearby-stop__map { display: inline-grid; min-width: 3.1rem; min-height: 2.75rem; padding: 0.25rem 0.55rem; place-items: center; border: 1px solid var(--ink); color: var(--ink); background: var(--paper-light); font-size: 0.7rem; font-weight: 700; text-decoration: none; }
+.nearby-stop__map:hover { color: var(--paper-light); background: var(--ink); }
+.nearby-stop__map:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
 .memo, .price-tag { display: inline-flex; margin-top: var(--space-xs); padding: 0.15rem 0.55rem; color: var(--red-deep); background: color-mix(in oklch, var(--red) 10%, var(--paper-light)); font-family: var(--display); font-size: 0.78rem; font-weight: 700; transform: rotate(-0.4deg); }
 .price-tag { color: var(--ink); background: color-mix(in oklch, var(--sky) 22%, var(--paper-light)); }
 .price-tag--pending { border: 1px dashed var(--red); color: var(--red-deep); background: transparent; }
@@ -388,6 +395,9 @@ button { font: inherit; }
   .timeline li { grid-template-columns: 1fr auto; gap: var(--space-xs) var(--space-sm); }
   .timeline li::before { left: -1.7rem; }
   .timeline time { grid-column: 1 / -1; padding: 0; }
+  .timeline-item--with-nearby { grid-template-columns: minmax(0, 1fr); }
+  .timeline-item--with-nearby > .stop { grid-column: 1; }
+  .timeline-item--with-nearby > .map-link { grid-column: 1; justify-self: end; margin-top: var(--space-xs); }
   .stop p { font-size: 0.86rem; }
   .prep-intro, .prep-grid, .prep-sources, .journey-overview, .day-extras, .route-button, .route-pair, .stay-footer, .cost-intro, .ledger, .total-block, .cost-note { margin-left: 0; }
   .prep-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
@@ -429,7 +439,7 @@ button { font: inherit; }
 @media print {
   body { background: var(--paper-light); }
   .cover { min-height: auto; }
-  .date-tabs, .progress-line, .route-button, .route-pair, .map-link, .sheet-footer { display: none !important; }
+  .date-tabs, .progress-line, .route-button, .route-pair, .map-link, .nearby-stop__map, .sheet-footer { display: none !important; }
   .notebook { max-width: none; margin: 0; }
   .day-sheet, .day-sheet[hidden] { display: block !important; break-after: page; border: 0; box-shadow: none; animation: none; }
   a { text-decoration: none; }
