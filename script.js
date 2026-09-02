@@ -5,7 +5,6 @@ const nextButton = document.querySelector('#nextDay');
 
 const pageLabels = [
   '行前 · 雪地準備',
-  '餐廳候選',
   '12/18 · 抵達與下呂',
   '12/19 · 新穗高',
   '12/20 · 高山與白川鄉',
@@ -39,8 +38,6 @@ function activatePanel(panelId, options = {}) {
   activeTab.scrollIntoView({ behavior: options.instant ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
   if (panelId === 'pre-trip') {
     progressText.textContent = 'BEFORE WE GO · 行前準備';
-  } else if (panelId === 'restaurants') {
-    progressText.textContent = 'FOOD POCKET LIST · 餐廳候選';
   } else if (panelId === 'costs') {
     progressText.textContent = 'STAY LEDGER · 住宿費';
   } else {
@@ -68,12 +65,6 @@ tabs.forEach((tab) => {
     event.preventDefault();
     tabs[targetIndex].focus();
     activatePanel(tabs[targetIndex].dataset.panel);
-  });
-});
-
-document.querySelectorAll('[data-food-target]').forEach((button) => {
-  button.addEventListener('click', () => {
-    document.querySelector(`#${button.dataset.foodTarget}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
