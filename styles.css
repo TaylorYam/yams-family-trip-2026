@@ -220,7 +220,6 @@ button { font: inherit; }
 .route-line--1 { stroke: var(--route-day-1); }
 .route-line--2 { stroke: var(--route-day-2); }
 .route-line--3 { stroke: var(--route-day-3); }
-.route-line--optional { stroke-dasharray: 14 7; }
 .route-line--4 { stroke: var(--route-day-4); }
 .route-line--5 { stroke: var(--route-day-5); }
 .route-line--6 { stroke: var(--route-day-6); }
@@ -257,6 +256,9 @@ button { font: inherit; }
 .choice-list { display: grid; border-top: 1px solid var(--line); }
 .choice-item { display: grid; grid-template-columns: minmax(6.8rem, 0.28fr) minmax(0, 1fr) auto; align-items: center; gap: var(--space-md); min-height: 6.6rem; padding: var(--space-md) var(--space-sm); border-bottom: 1px solid var(--line); background: color-mix(in oklch, var(--paper-light) 92%, var(--paper)); }
 .choice-item--snack { background: color-mix(in oklch, var(--paper-light) 91%, var(--red)); }
+.choice-item--closed { background: color-mix(in oklch, var(--paper-light) 86%, var(--line)); }
+.choice-item--closed h4 { color: var(--ink-soft); }
+.choice-item--closed .choice-item__meta small { color: var(--red-deep); font-weight: 700; }
 .choice-item__meta { display: grid; align-self: start; gap: 0.15rem; padding-top: 0.15rem; color: var(--red-deep); font-size: 0.68rem; font-weight: 700; }
 .choice-item__meta small { color: var(--ink-soft); font-size: 0.65rem; font-weight: 500; }
 .choice-item h4 { margin: 0; font-family: var(--display); font-size: 1.08rem; line-height: 1.3; }
