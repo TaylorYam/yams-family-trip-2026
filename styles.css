@@ -200,6 +200,7 @@ button { font: inherit; }
   --route-day-4: oklch(0.51 0.12 322);
   --route-day-5: oklch(0.52 0.12 232);
   --route-day-6: oklch(0.4 0.11 269);
+  --route-day-7: oklch(0.48 0.105 103);
   margin: var(--space-3xl) 0 var(--space-md) 2.6rem;
   padding-top: var(--space-md);
   border-top: 2px solid var(--ink);
@@ -223,6 +224,7 @@ button { font: inherit; }
 .route-line--4 { stroke: var(--route-day-4); }
 .route-line--5 { stroke: var(--route-day-5); }
 .route-line--6 { stroke: var(--route-day-6); }
+.route-line--7 { stroke: var(--route-day-7); }
 .route-line--branch { stroke-dasharray: 7 8; }
 .route-atlas__places circle { fill: var(--paper-light); stroke: var(--ink); stroke-width: 2; vector-effect: non-scaling-stroke; }
 .route-atlas__places text { fill: var(--ink); font-family: var(--display); font-size: 15px; font-weight: 700; paint-order: stroke; stroke: var(--paper-light); stroke-width: 5px; stroke-linejoin: round; }
@@ -234,6 +236,7 @@ button { font: inherit; }
 .daymark--4 circle { fill: var(--route-day-4); }
 .daymark--5 circle { fill: var(--route-day-5); }
 .daymark--6 circle { fill: var(--route-day-6); }
+.daymark--7 circle { fill: var(--route-day-7); }
 .route-atlas figcaption { display: grid; gap: var(--space-md); padding: var(--space-md) var(--space-lg) var(--space-lg); border-top: 1px solid var(--line); background: var(--paper-light); }
 .route-atlas__scale { color: var(--ink-soft); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; }
 .route-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm) var(--space-xl); margin: 0; padding: 0; list-style: none; }
@@ -246,6 +249,7 @@ button { font: inherit; }
 .route-legend__day--4 b { color: var(--route-day-4); }
 .route-legend__day--5 b { color: var(--route-day-5); }
 .route-legend__day--6 b { color: var(--route-day-6); }
+.route-legend__day--7 b { color: var(--route-day-7); }
 .route-atlas figcaption > p { margin: 0; padding-top: var(--space-sm); border-top: 1px dashed var(--line); color: var(--ink-soft); font-size: 0.7rem; }
 
 .choice-list { display: grid; border-top: 1px solid var(--line); }
