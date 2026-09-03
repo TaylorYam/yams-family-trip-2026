@@ -223,6 +223,7 @@ button { font: inherit; }
 .route-line--4 { stroke: var(--route-day-4); }
 .route-line--5 { stroke: var(--route-day-5); }
 .route-line--6 { stroke: var(--route-day-6); }
+.route-line--branch { stroke-dasharray: 7 8; }
 .route-atlas__places circle { fill: var(--paper-light); stroke: var(--ink); stroke-width: 2; vector-effect: non-scaling-stroke; }
 .route-atlas__places text { fill: var(--ink); font-family: var(--display); font-size: 15px; font-weight: 700; paint-order: stroke; stroke: var(--paper-light); stroke-width: 5px; stroke-linejoin: round; }
 .daymark circle { stroke: var(--paper-light); stroke-width: 3; vector-effect: non-scaling-stroke; }

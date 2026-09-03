@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=daily-plan-g1">
-  <script src="script.js?v=daily-plan-g1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=daily-plan-h1">
+  <script src="script.js?v=daily-plan-h1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#trip-content">跳到行程內容</a>
@@ -101,7 +101,7 @@
         <figure class="route-atlas">
           <svg class="route-atlas__map" viewBox="0 0 760 640" role="img" aria-labelledby="route-map-title route-map-desc">
             <title id="route-map-title">十二月十八日至二十三日自駕路線示意圖</title>
-            <desc id="route-map-desc">每天以不同顏色標示。路線由中部國際機場前往郡上、下呂、新穗高、平湯、高山、白川鄉、金澤、庄川峽、高岡、雨晴、東尋坊、永平寺，最後回到名古屋。</desc>
+            <desc id="route-map-desc">每天以不同顏色標示。路線由中部國際機場前往郡上、下呂、新穗高、平湯、高山、白川鄉、金澤、庄川峽、高岡、雨晴；第六天依狀況選擇東尋坊或那谷寺，再經永平寺回到名古屋。</desc>
 
             <path class="route-atlas__land" d="M85 118c54-41 119-46 173-20 36 17 61 17 99-4 45-25 112-23 165 6 49 27 86 77 99 136 13 61 5 135-18 194-25 66-76 125-143 155-65 29-154 34-229 3-82-35-142-107-153-193-9-71 14-137 46-185 22-33 8-63-39-92Z"/>
             <path class="route-atlas__coast" d="M109 137c48 12 91 8 127-15 33-21 67-21 101-4 38 19 78 17 115-5 35-21 78-16 116 11"/>
@@ -125,6 +125,7 @@
               <path class="route-line route-line--4" d="M255 195c-19 0-28 11-27 24 2 16 22 20 37 11 14-9 12-31-10-35Z"/>
               <path class="route-line route-line--5" d="M255 195C294 218 344 238 396 226C406 193 394 164 365 145C390 147 414 157 430 170C385 192 330 207 255 195Z"/>
               <path class="route-line route-line--6" d="M255 195C227 227 202 264 180 300C195 319 210 337 225 350C270 390 322 451 390 540"/>
+              <path class="route-line route-line--6 route-line--branch" d="M255 195C238 217 223 239 210 260C212 291 218 322 225 350"/>
             </g>
 
             <g class="route-atlas__places">
@@ -140,6 +141,7 @@
               <g transform="translate(365 145)"><circle r="7"/><text x="-10" y="-16" text-anchor="end">雨晴</text></g>
               <g transform="translate(430 170)"><circle r="7"/><text x="15" y="5">富山</text></g>
               <g transform="translate(180 300)"><circle r="7"/><text x="-14" y="-13" text-anchor="end">東尋坊</text></g>
+              <g transform="translate(210 260)"><circle r="7"/><text x="14" y="-10">那谷寺</text></g>
               <g transform="translate(225 350)"><circle r="7"/><text x="-15" y="19" text-anchor="end">永平寺</text></g>
               <g transform="translate(390 540)"><circle r="7"/><text x="14" y="5">名古屋</text></g>
             </g>
@@ -162,7 +164,7 @@
               <li class="route-legend__day route-legend__day--3"><b>DAY 3</b><span>平湯 → 高山 → 白川鄉 → 金澤</span></li>
               <li class="route-legend__day route-legend__day--4"><b>DAY 4</b><span>金澤市內 · 兼六園</span></li>
               <li class="route-legend__day route-legend__day--5"><b>DAY 5</b><span>金澤 → 庄川峽 → 高岡 → 雨晴 → 金澤</span></li>
-              <li class="route-legend__day route-legend__day--6"><b>DAY 6</b><span>金澤 → 東尋坊 → 永平寺 → 名古屋</span></li>
+              <li class="route-legend__day route-legend__day--6"><b>DAY 6</b><span>金澤 → 東尋坊／那谷寺 → 永平寺 → 名古屋</span></li>
             </ol>
             <p>DAY 3 已確定由白川鄉直接前往金澤，連住 Hotel Forza Kanazawa 三晚。</p>
           </figcaption>
@@ -320,7 +322,7 @@
     </section>
 
     <section class="day-sheet" id="day-6" role="tabpanel" aria-labelledby="tab-day-6" hidden>
-      <header class="day-heading"><div><span class="day-number">DAY 06</span><h2>沿福井海岸回名古屋</h2></div><span class="weather-note">20:00前還車</span></header>
+      <header class="day-heading"><div><span class="day-number">DAY 06</span><h2>福井二選一，再訪永平寺</h2></div><span class="weather-note">20:00前還車</span></header>
       <div class="postcard-pair">
         <figure class="postcard-photo postcard-photo--left">
           <img src="assets/tojinbo.webp" width="1000" height="667" loading="lazy" decoding="async" alt="東尋坊柱狀岩壁與日本海">
@@ -332,14 +334,14 @@
         </figure>
       </div>
       <ol class="timeline">
-        <li class="timeline-item--with-picks"><time>07:00～08:00</time><div class="stop"><span class="stop__kind">早餐</span><h3>金澤出發前</h3><div class="time-picks" aria-label="金澤早餐選擇"><div class="time-picks__heading"><span>今天的早餐</span><small>吃完順勢往福井</small></div><div class="choice-list"><article class="choice-item"><div class="choice-item__meta"><span>早餐</span><small>咖啡・早午餐</small></div><div><h4>むさしの森珈琲 金澤入江店</h4><p>07:00開始營業，適合退房後先吃早餐。</p><small>07:00–22:00</small></div><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/scvbWjnCnKVuvzDbA" target="_blank" rel="noopener">地圖</a></article></div></div></div></li>
-        <li><time>08:30</time><div class="stop"><span class="stop__kind">出發</span><h3>Hotel Forza Kanazawa</h3><p>退房後沿北陸自動車道前往福井。</p></div></li>
-        <li><time>約10:00</time><div class="stop"><span class="stop__kind">海蝕地形</span><h3>東尋坊</h3><p class="sight-highlight"><span>看點</span>綿延約1公里的柱狀節理斷崖，近看日本海浪拍岩壁。</p><p>冬季海風強，注意腳下；星期三遊覽船停駛。</p></div><a class="map-link map-link--quiet" href="https://maps.google.com/?q=Tojinbo" target="_blank" rel="noopener">地圖</a></li>
-        <li><time>約13:00</time><div class="stop"><span class="stop__kind">禪寺</span><h3>大本山 永平寺</h3><p class="sight-highlight"><span>看點</span>杉林中的曹洞宗修行道場，七堂伽藍與長廊氣氛莊嚴。</p><p>預留約90分鐘參拜。</p></div><a class="map-link map-link--quiet" href="https://maps.google.com/?q=Daihonzan+Eiheiji" target="_blank" rel="noopener">地圖</a></li>
-        <li><time>約17:00</time><div class="stop"><span class="stop__kind">住宿</span><h3>Nagoya Stay</h3><p>先放行李，再前往租車門市。</p><div class="price-tag">NT$1,500／人／晚</div></div><div class="stay-actions"><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/zK41Wwnbz86Gt4w7A" target="_blank" rel="noopener">Google 地圖</a><a class="map-link map-link--airbnb" href="https://www.airbnb.com.tw/rooms/1538398369491390618" target="_blank" rel="noopener">Airbnb</a></div></li>
+        <li class="timeline-item--with-picks"><time>07:00～08:00</time><div class="stop"><span class="stop__kind">退房・早餐</span><h3>退房後先吃早餐</h3><div class="time-picks" aria-label="金澤早餐"><div class="time-picks__heading"><span>今天的早餐</span><small>吃完再決定上午路線</small></div><div class="choice-list"><article class="choice-item"><div class="choice-item__meta"><span>早餐</span><small>咖啡・早午餐</small></div><div><h4>むさしの森珈琲 金澤入江店</h4><p>退房後前往，吃完依天候與時間選擇東尋坊或那谷寺。</p><small>07:00–22:00</small></div><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/scvbWjnCnKVuvzDbA" target="_blank" rel="noopener">地圖</a></article></div></div></div></li>
+        <li class="timeline-item--with-picks"><time>早餐後</time><div class="stop"><span class="stop__kind">上午景點・二選一</span><h3>東尋坊或那谷寺</h3><p>依當天天候與時間決定，只選一處。</p><div class="time-picks" aria-label="上午景點二選一"><div class="time-picks__heading"><span>現場決定</span><small>選好後直接開地圖</small></div><div class="choice-list"><article class="choice-item"><div class="choice-item__meta"><span>選擇 A</span><small>日本海景</small></div><div><h4>東尋坊</h4><p>看柱狀節理斷崖與日本海；冬季海風強，注意腳下。</p></div><a class="map-link map-link--quiet" href="https://maps.google.com/?q=Tojinbo" target="_blank" rel="noopener">地圖</a></article><article class="choice-item"><div class="choice-item__meta"><span>選擇 B</span><small>山寺庭園</small></div><div><h4>那谷寺</h4><p>奇岩、苔庭與古寺融為一景，時間較緊或海邊天候不佳時可改走這條。</p></div><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/jGyjLnNur2DPuvJj7" target="_blank" rel="noopener">地圖</a></article></div></div></div></li>
+        <li class="timeline-item--with-picks"><time>中午</time><div class="stop"><span class="stop__kind">午餐・二選一</span><h3>福井午餐</h3><p>上午景點結束後，依所在位置與候位狀況選一間。</p><div class="time-picks" aria-label="福井午餐二選一"><div class="time-picks__heading"><span>午餐選擇</span><small>吃完前往永平寺</small></div><div class="choice-list"><article class="choice-item"><div class="choice-item__meta"><span>首選</span><small>越前蕎麥麵</small></div><div><h4>越前蕎麦 見吉屋</h4><p>品嘗福井風味的越前蕎麥麵。</p></div><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/u3PicAXr8swGnGCV8" target="_blank" rel="noopener">地圖</a></article><article class="choice-item"><div class="choice-item__meta"><span>備選</span><small>手打烏龍麵</small></div><div><h4>新富</h4><p>手打烏龍麵備選，依上午路線與營業狀況決定。</p></div><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/TRqkggEp1rMDwCbq8" target="_blank" rel="noopener">地圖</a></article></div></div></div></li>
+        <li><time>午餐後</time><div class="stop"><span class="stop__kind">禪寺</span><h3>大本山 永平寺</h3><p class="sight-highlight"><span>看點</span>杉林中的曹洞宗修行道場，七堂伽藍與長廊氣氛莊嚴。</p><p>兩條上午路線都在此匯合，預留約90分鐘參拜。</p></div><a class="map-link map-link--quiet" href="https://maps.google.com/?q=Daihonzan+Eiheiji" target="_blank" rel="noopener">地圖</a></li>
+        <li><time>傍晚</time><div class="stop"><span class="stop__kind">住宿</span><h3>Nagoya Stay</h3><p>永平寺參拜後回名古屋，先放行李再前往租車門市。</p><div class="price-tag">NT$1,500／人／晚</div></div><div class="stay-actions"><a class="map-link map-link--quiet" href="https://maps.app.goo.gl/zK41Wwnbz86Gt4w7A" target="_blank" rel="noopener">Google 地圖</a><a class="map-link map-link--airbnb" href="https://www.airbnb.com.tw/rooms/1538398369491390618" target="_blank" rel="noopener">Airbnb</a></div></li>
         <li><time>20:00前</time><div class="stop"><span class="stop__kind">還車</span><h3>TOYOTA 租車 · 名古屋新幹線口</h3><p>還車完成後，後續行程改搭大眾運輸。</p></div><a class="map-link map-link--quiet" href="https://maps.google.com/?q=21-13+Tsubakicho+Nakamura+Ward+Nagoya" target="_blank" rel="noopener">地圖</a></li>
       </ol>
-      <a class="route-button" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Forza+Kanazawa&amp;destination=2-chome-3+Wakamiyacho%2C+Nakamura+Ward%2C+Nagoya%2C+Aichi+453-0023&amp;waypoints=Tojinbo%7CDaihonzan+Eiheiji&amp;travelmode=driving" target="_blank" rel="noopener"><span>開啟今日完整路線</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-5 4-6 7-6h7M15 9l4 4-4 4M7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm0 0c0 3-2 5-2 5S3 8 3 5"/></svg></a>
+      <div class="route-pair"><a class="route-button" href="https://www.google.com/maps/dir/?api=1&amp;origin=Musashino+Mori+Coffee+Kanazawa+Irie&amp;destination=2-chome-3+Wakamiyacho%2C+Nakamura+Ward%2C+Nagoya%2C+Aichi+453-0023&amp;waypoints=Tojinbo%7CDaihonzan+Eiheiji&amp;travelmode=driving" target="_blank" rel="noopener"><span>東尋坊路線</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-5 4-6 7-6h7M15 9l4 4-4 4"/></svg></a><a class="route-button route-button--secondary" href="https://www.google.com/maps/dir/?api=1&amp;origin=Musashino+Mori+Coffee+Kanazawa+Irie&amp;destination=2-chome-3+Wakamiyacho%2C+Nakamura+Ward%2C+Nagoya%2C+Aichi+453-0023&amp;waypoints=Natadera%7CDaihonzan+Eiheiji&amp;travelmode=driving" target="_blank" rel="noopener"><span>那谷寺路線</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-5 4-6 7-6h7M15 9l4 4-4 4"/></svg></a></div>
     </section>
 
     <section class="day-sheet" id="day-7" role="tabpanel" aria-labelledby="tab-day-7" hidden>
